@@ -1,4 +1,5 @@
 import { Menu } from 'lucide-react';
+import { SyncPanel } from '../Sync/SyncPanel';
 import type { Page } from '../../types';
 import styles from './Header.module.css';
 
@@ -26,6 +27,7 @@ export function Header({ page, onMenuClick }: HeaderProps) {
         <Menu size={24} />
       </button>
       <h1 className={styles.title}>{TITLES[page]}</h1>
+      <SyncPanel />
     </header>
   );
 }

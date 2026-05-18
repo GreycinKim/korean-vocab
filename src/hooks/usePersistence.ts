@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { touchLocalUpdatedAt } from '../lib/syncPayload';
 import { useVocabStore } from '../store/vocabStore';
 
 const STORAGE_KEY = 'korean-vocab-app-v1';
@@ -32,6 +33,7 @@ export function usePersistence(): void {
         STORAGE_KEY,
         JSON.stringify({ words, folders }),
       );
+      touchLocalUpdatedAt();
     } catch {
       console.warn('Failed to persist vocab to localStorage');
     }

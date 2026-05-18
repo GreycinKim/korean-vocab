@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { loadFromStorage, usePersistence } from '../../hooks/usePersistence';
+import { useSync } from '../../hooks/useSync';
+import { useSyncStore } from '../../store/syncStore';
 import { usePageFromRoute, pathForPage } from '../../hooks/usePageFromRoute';
 import { useVocabStore } from '../../store/vocabStore';
 import { useSettingsStore } from '../../store/settingsStore';
@@ -20,14 +22,18 @@ export function AppLayout() {
   const loadSettings = useSettingsStore((s) => s.loadSettings);
   const loadStudySettings = useStudySettingsStore((s) => s.load);
 
+  const initSync = useSyncStore((s) => s.init);
+
   useEffect(() => {
     loadFromStorage();
     initialize();
     loadSettings();
     loadStudySettings();
-  }, [initialize, loadSettings, loadStudySettings]);
+    return initSync();
+  }, [initialize, loadSettings, loadStudySettings, initSync]);
 
   usePersistence();
+  useSync();
 
   const handleNavigate = (next: Page) => {
     navigate(pathForPage(next));
