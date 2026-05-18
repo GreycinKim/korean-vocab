@@ -25,6 +25,13 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 768px) {
+  .btnInline {
+    width: 44px;
+    height: 44px;
+  }
+}
+
 .btn:hover:not(:disabled) {
   background: #e0e7ff;
   transform: scale(1.05);

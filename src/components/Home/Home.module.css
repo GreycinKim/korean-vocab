@@ -193,5 +193,20 @@
   .folderSelect {
     font-size: 16px;
     max-width: none;
+    min-height: 44px;
+  }
+
+  .footer {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 100px;
   }
 }

@@ -106,6 +106,6 @@
 
   .hint {
     font-size: 11px;
-    bottom: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
   }
 }

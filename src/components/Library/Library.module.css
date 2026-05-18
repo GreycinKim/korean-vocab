@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 24px;
-  min-height: 500px;
+  min-height: 0;
 }
 
 .sidebar {
@@ -152,13 +152,21 @@
   }
 
   .sidebar {
-    max-height: none;
+    max-height: min(42vh, 320px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-shrink: 0;
   }
 }
 
 @media (max-width: 768px) {
   .main {
-    padding: 16px;
+    padding: 12px;
+  }
+
+  .dragHint {
+    font-size: 10px;
+    padding: 0 4px 8px;
   }
 
   .toolbar {

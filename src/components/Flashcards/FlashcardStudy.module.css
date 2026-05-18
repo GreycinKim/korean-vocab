@@ -97,3 +97,21 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .study {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .topBar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sessionCounters {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 11px;
+  }
+}
