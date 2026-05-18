@@ -1,0 +1,150 @@
+.stats {
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+.barWrap {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--radius-pill);
+  transition: width 0.3s ease;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.summary {
+  max-width: 520px;
+  margin: 48px auto;
+  text-align: center;
+  padding: 40px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.summary h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.statItem {
+  padding: 16px;
+  background: #faf9f6;
+  border-radius: var(--radius);
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.statLabel {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.filterTag {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.breakdown {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.nextDue {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.summaryActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btnHome {
+  padding: 12px 24px;
+  background: #f3f4f6;
+  color: var(--text);
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+.btnHome:hover {
+  background: #e5e7eb;
+}
+
+.btnWait {
+  padding: 12px 24px;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+.btnWait:hover {
+  background: #fde68a;
+}
+
+.btnRestart {
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+.btnRestart:hover {
+  background: var(--accent-hover);
+}
+
+@media (max-width: 768px) {
+  .summary {
+    margin: 24px auto;
+    padding: 24px 16px;
+  }
+
+  .summary h2 {
+    font-size: 20px;
+  }
+
+  .summaryActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btnHome,
+  .btnRestart {
+    width: 100%;
+    min-height: 48px;
+  }
+}

@@ -1,0 +1,60 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: var(--accent);
+  border: 1px solid #c7d2fe;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btnOverlay {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+}
+
+.btnInline {
+  position: static;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.btn:hover:not(:disabled) {
+  background: #e0e7ff;
+  transform: scale(1.05);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btnActive {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.btnMuted {
+  opacity: 0.5;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

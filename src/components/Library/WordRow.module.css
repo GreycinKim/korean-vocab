@@ -1,0 +1,86 @@
+.row {
+  transition: background 0.15s;
+}
+
+.rowDragging {
+  opacity: 0.5;
+}
+
+.dragHandle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 4px;
+  margin-right: 4px;
+  border-radius: 8px;
+  color: #9ca3af;
+  cursor: grab;
+  touch-action: none;
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}
+
+.koreanCell {
+  display: flex;
+  align-items: center;
+}
+
+.korean {
+  font-family: var(--font-kr);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badgeNew {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badgeLearning {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badgeReview {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.badgeRelearning {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
+.iconBtn {
+  padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--text-muted);
+}
+
+.iconBtn:hover {
+  background: #f3f4f6;
+  color: var(--text);
+}

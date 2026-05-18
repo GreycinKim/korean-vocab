@@ -1,0 +1,155 @@
+.panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 14px;
+  background: #faf9f6;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+}
+
+@media (max-width: 600px) {
+  .preview {
+    grid-template-columns: 1fr;
+  }
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.kr {
+  font-family: var(--font-kr);
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.en {
+  font-size: 15px;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 14px;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.check input {
+  margin-top: 3px;
+}
+
+.fieldLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.select {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.saveBtn {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+}
+
+.saveBtn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.saveBtn:disabled {
+  background: #9ca3af;
+  cursor: default;
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  background: #f3f4f6;
+  color: var(--text);
+}
+
+.linkBtn:hover {
+  background: #e5e7eb;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    padding: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .saveBtn,
+  .linkBtn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .select {
+    font-size: 16px;
+    min-height: 44px;
+  }
+}

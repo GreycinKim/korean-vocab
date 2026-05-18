@@ -1,0 +1,88 @@
+.deck {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.picker {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.picker h2 {
+  margin-bottom: 8px;
+}
+
+.picker p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.select {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.startBtn {
+  padding: 12px 32px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.startBtn:hover {
+  background: var(--accent-hover);
+}
+
+.startBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.empty {
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--text-muted);
+}
+
+.studyArea {
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .deck {
+    padding: 8px 0 0;
+  }
+
+  .picker {
+    padding: 24px 16px;
+  }
+
+  .picker h2 {
+    font-size: 20px;
+  }
+
+  .select {
+    max-width: none;
+    font-size: 16px;
+  }
+
+  .startBtn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .studyArea {
+    min-height: auto;
+  }
+}

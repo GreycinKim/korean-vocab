@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #faf9f6;
+  --text: #1c1c1e;
+  --text-muted: #6b7280;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --tile-bg: #fff8e7;
+  --tile-border: #e8dcc8;
+  --reveal-green: #10b981;
+  --card-shadow: 0 4px 24px rgba(28, 28, 30, 0.08);
+  --radius: 12px;
+  --radius-pill: 999px;
+  --sidebar-width: 240px;
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-kr: 'Noto Sans KR', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.korean {
+  font-family: var(--font-kr);
+  font-size: 24px;
+  line-height: 1.6;
+}

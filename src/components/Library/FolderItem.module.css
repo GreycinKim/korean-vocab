@@ -1,0 +1,59 @@
+.folder {
+  margin-bottom: 2px;
+}
+
+.folderRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  transition: background 0.15s, box-shadow 0.15s;
+  border: 2px solid transparent;
+}
+
+.folderRow:hover {
+  background: #f3f4f6;
+}
+
+.folderRowActive {
+  background: #eef2ff;
+}
+
+.folderRowDropTarget {
+  background: #eef2ff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.chevron {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.iconWrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badge {
+  margin-left: auto;
+  font-size: 12px;
+  background: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  color: var(--text-muted);
+}
+
+.children {
+  padding-left: 20px;
+}
